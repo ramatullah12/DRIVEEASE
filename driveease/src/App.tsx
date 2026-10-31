@@ -10,6 +10,8 @@ import AdminBookingsPage from './pages/admin/AdminBookingsPage';
 import AdminPaymentsPage from './pages/admin/AdminPaymentsPage';
 import AdminReturnsPage from './pages/admin/AdminReturnsPage';
 import AdminMaintenancePage from './pages/admin/AdminMaintenancePage';
+import StaffDashboardPage from './pages/staff/StaffDashboardPage';
+import CustomerDashboardPage from './pages/customer/CustomerDashboardPage';
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+
+          {/* Admin Routes */}
           <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
           <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
           <Route path="/admin/vehicles" element={<AdminVehiclesPage />} />
@@ -27,6 +31,14 @@ export default function App() {
           <Route path="/admin/payments" element={<AdminPaymentsPage />} />
           <Route path="/admin/returns" element={<AdminReturnsPage />} />
           <Route path="/admin/maintenance" element={<AdminMaintenancePage />} />
+
+          {/* Staff (Petugas Rental) Routes */}
+          <Route path="/staff" element={<Navigate to="/staff/dashboard" replace />} />
+          <Route path="/staff/dashboard" element={<StaffDashboardPage />} />
+
+          {/* Customer Portal Routes */}
+          <Route path="/customer" element={<Navigate to="/customer/profile" replace />} />
+          <Route path="/customer/profile" element={<CustomerDashboardPage />} />
         </Routes>
       </AuthProvider>
     </Router>
