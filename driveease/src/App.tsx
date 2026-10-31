@@ -10,6 +10,7 @@ import AdminBookingsPage from './pages/admin/AdminBookingsPage';
 import AdminPaymentsPage from './pages/admin/AdminPaymentsPage';
 import AdminReturnsPage from './pages/admin/AdminReturnsPage';
 import AdminMaintenancePage from './pages/admin/AdminMaintenancePage';
+import AdminReportsPage from './pages/admin/AdminReportsPage';
 import StaffDashboardPage from './pages/staff/StaffDashboardPage';
 import CustomerDashboardPage from './pages/customer/CustomerDashboardPage';
 
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/admin/payments" element={<AdminPaymentsPage />} />
           <Route path="/admin/returns" element={<AdminReturnsPage />} />
           <Route path="/admin/maintenance" element={<AdminMaintenancePage />} />
+          <Route path="/admin/reports" element={<AdminReportsPage />} />
 
           {/* Staff (Petugas Rental) Routes */}
           <Route path="/staff" element={<Navigate to="/staff/dashboard" replace />} />
