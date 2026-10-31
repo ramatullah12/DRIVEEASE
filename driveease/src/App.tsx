@@ -7,6 +7,7 @@ import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import AdminVehiclesPage from './pages/admin/AdminVehiclesPage';
 import AdminCustomersPage from './pages/admin/AdminCustomersPage';
 import AdminBookingsPage from './pages/admin/AdminBookingsPage';
+import AdminPaymentsPage from './pages/admin/AdminPaymentsPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/admin/vehicles" element={<AdminVehiclesPage />} />
           <Route path="/admin/customers" element={<AdminCustomersPage />} />
           <Route path="/admin/bookings" element={<AdminBookingsPage />} />
+          <Route path="/admin/payments" element={<AdminPaymentsPage />} />
         </Routes>
       </AuthProvider>
     </Router>
